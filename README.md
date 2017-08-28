@@ -1,1 +1,0 @@
-# davidgabriel07.github.io
