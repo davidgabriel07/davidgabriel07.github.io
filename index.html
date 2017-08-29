@@ -1,15 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>David Gabriel</title>
+	<title>Portfolio</title>
+	<style>
+	.profile-container,.profile {
+	width: 480px;
+	height:420px;
+	border: 1px solid black;
+	margin: 80px auto 0 auto;
+	border-radius: 2%;
+	background: #2ecc71;
+	}
+	.back{
+		background: #9b59b6;
+	}
+	.profile-back{
+		background: transparent url('Desert.jpg') no-repeat;
+		background-size: cover;
+		width: 480px;
+		height: 200px;
+	}
+	.profile-info{
+		position: relative;
+		margin-top: 55px; 
+		line-height: 0;
+	}
+	.profile-image{
+		margin-top: -40px;
+		margin-left: 200px;
+		width:80px;
+		height:80px;
+		position: absolute;
+		background: transparent url('Hydrangeas.jpg') no-repeat;
+		background-size: cover;
+		border-radius: 50%; 
+	}
+	li{
+		padding-top: 25px; 
+		padding-left: 25px;
+		padding-right: 25px;
+		display: inline-block;
+	}
+	</style>
 </head>
-<body>
-    <p>Contact Me</p>
-    <a href="mailto:davidgabriel07@gmail.com">send mail</a><br>
-    <a href="tel:9445610902">call</a><br>
-    <a href="sms:9445610902">message</a>
+<body class="back">
+<div class="profile-container">	
+	<div class="profile-back">
+	</div>
+	<div class="profile-image"></div>
+	<div class="profile-info">
+	<center><h1>DAVID GABRIEL P</h1>
+	<h3>Im a Developer</h3></center>
+	</div>
+	<div class="profile-link">
+		<ul class="links" style="list-style-type: none;padding: 0;width:480px;">
+			<center>
+			<li>Website</li>
+			<li>Skills</li>
+			<li>Portfolio</li>
+			<li>Hire</li>
+			</center>
+		</ul>
+	</div>
+</div>
+<div class="profile">
+	<form>
+		<fieldset>
+			<legend>Profile</legend>
+			<label>Username</label><br>
+			<input type="text" name="user" placeholder="Username" id="user"><br>
+			<label>Firstname</label><label style="float: right;margin-right: 150px;">Lastname</label><br>
+			<input type="text" name="fname" id="fname" placeholder="Firstname">
+			<input style="float: right;margin-right: 70px;" type="text" name="lname" id="lname" placeholder="Lastname"><br>
+			<label>Email</label><br>
+			<input type="text" name="mail" placeholder="examople">@
+			<select>
+				<option>------</option>
+				<option>gmail.com</option>
+				<option>yahoo.com</option>
+				<option>outlook.com</option>
+				<option>hotmail.com</option>
+			</select>
+			
+		</fieldset>
+	</form>
+</div>
 </body>
 </html>
