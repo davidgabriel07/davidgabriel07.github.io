@@ -3,19 +3,25 @@
 <head>
 	<title>Portfolio</title>
 	<style>
-	.profile-container,.profile {
+	.profile-container{
 	width: 480px;
 	height:420px;
-	border: 1px solid black;
+	border: 1px solid black; 
 	margin: 80px auto 0 auto;
 	border-radius: 2%;
-	background: #2ecc71;
+	background:#ffb3ff;
+	}
+	body{
+		background: #602040;
+	}
+	.profile-links{
+		background: silver;
 	}
 	.back{
-		background: #9b59b6;
+		background: ;
 	}
 	.profile-back{
-		background: transparent url('Desert.jpg') no-repeat;
+		background: transparent url('back1.jpg') no-repeat;
 		background-size: cover;
 		width: 480px;
 		height: 200px;
@@ -31,8 +37,9 @@
 		width:80px;
 		height:80px;
 		position: absolute;
-		background: transparent url('Hydrangeas.jpg') no-repeat;
+		background: transparent url('pro.jpg') no-repeat;
 		background-size: cover;
+		border: 4px solid white;
 		border-radius: 50%; 
 	}
 	li{
@@ -40,6 +47,59 @@
 		padding-left: 25px;
 		padding-right: 25px;
 		display: inline-block;
+	}
+	.check{
+		margin-left:35px;
+	}
+	.check1{
+		margin-left: 75px;
+	}
+	.check2{
+		margin-left: 57px;
+	}
+	.check3{
+		margin-left: 75px;
+	}
+	.check4{
+		margin-left: 89px;
+	}
+	#small{
+		width: 25px;
+	}
+	input[type=radio]{
+		margin-left:55px;
+	}
+	.profile,.add{
+		width: 480px;
+		height: 425px;
+		margin: 50px auto 0 auto;
+		background:#ffccff;
+	}
+	.profile{
+		height: 375px;
+	}
+	.box{
+		margin: 50px auto 0 auto;
+	}
+	.full{
+		width: 405px;
+		border:none;
+		height: 20px;
+		border-radius: 5px;
+		background:silver;
+	}
+	.half{
+		width:150px;
+		border: none;
+		height: 20px;
+		border-radius: 5px;
+		background: silver;
+	}
+	.rad{
+		background: #27ae60;
+	}
+	.box{
+		color:white;
 	}
 	</style>
 </head>
@@ -66,24 +126,75 @@
 <div class="profile">
 	<form>
 		<fieldset>
-			<legend>Profile</legend>
+				<br><br>
+			<legend><h3>Profile</h3></legend>
 			<label>Username</label><br>
-			<input type="text" name="user" placeholder="Username" id="user"><br>
-			<label>Firstname</label><label style="float: right;margin-right: 150px;">Lastname</label><br>
-			<input type="text" name="fname" id="fname" placeholder="Firstname">
-			<input style="float: right;margin-right: 70px;" type="text" name="lname" id="lname" placeholder="Lastname"><br>
-			<label>Email</label><br>
-			<input type="text" name="mail" placeholder="examople">@
-			<select>
-				<option>------</option>
-				<option>gmail.com</option>
-				<option>yahoo.com</option>
-				<option>outlook.com</option>
-				<option>hotmail.com</option>
-			</select>
-			
+			<input type="text" class="full" name="user" placeholder="Username" id="user"><br>
+			<br><label>Firstname</label><label style="float: right;margin-right: 150px;">Lastname</label><br>
+			<input class="half" type="text" name="fname" id="fname" placeholder="Firstname">
+			<input style="float: right;margin-right: 40px;" class="half" type="text" name="lname" id="lname" placeholder="Lastname"><br>
+			<br><label>Email</label><br>
+			<input type="text" class="half" name="mail" placeholder="example">@<input class="half" list="mail" name="mail" placeholder="domain">
+			<datalist id="mail">
+				<option value="gmail.com">   
+				<option value="yahoo.com">
+				<option value="outlook.com">
+				<option value="hotmail.com">
+				<option value="redmail.com">
+				<option value="rediff.com">
+				<option value="karpagam.com">
+			</datalist><br>
+			<br><label for="Phone No">Phone</label><label for="gender" style="float:right;margin-right:140px;">Gender</label><br>
+			<input class="half" type="text" id="small" value="+91" disabled><input class="half" type="text" name="phone" maxlength="10"  placeholder="9876543210"><input class="rad" type="radio" name="gender">Male <input class="rad" type="radio" name="gender">Female<br>
+			<br><label for="skills">Skills</label><br>
+				<input class="check" type="checkbox">C<input class="check1" type="checkbox">C++<input class="check3" type="checkbox">Python<br>
+				<input class="check" type="checkbox">Java<input class="check2" type="checkbox">JS<input class="check4" type="checkbox">Perl
 		</fieldset>
+		<div class="add">
+			<form>
+				<fieldset>
+					<legend><h3>Communication Address</h3></legend>
+					<label>Door No</label><br>
+					<input class="full" type="text" name="address"><br><br>
+					<label>Street Address</label><br>
+					<input class="full" type="text" name="street"><br><br>
+					<label>Location</label><br>
+					<input class="full" type="text" name="location"><br><br>
+					<label>City</label><br>
+					<input class="full" type="text" name="city"><br><br>
+					<label>State</label><br>
+					<input class="full" type="text" name="state"><br><br>
+					<label>Country</label><br>
+					<input class="full" type="text" name="country"><br><br>
+					<label>Pincode</label><br>
+					<input type="text" class="full" name="pin" placeholder="641032" maxlength="6">
+				</fieldset>
+			</form>
+		</div>
+		<div class="box"><input type="checkbox" name="check1" style="margin-left:70px;">Use communication address for permanent address</div>
+		<div class="add">
+				<form>
+					<fieldset>
+						<legend><h3>Permanent Address</h3></legend>
+						<label>Door No</label><br>
+						<input class="full" type="text" name="address"><br><br>
+						<label>Street Address</label><br>
+						<input class="full" type="text" name="street"><br><br>
+						<label>Location</label><br>
+						<input class="full" type="text" name="location"><br><br>
+						<label>City</label><br>
+						<input class="full" type="text" name="city"><br><br>
+						<label>State</label><br>
+						<input class="full" type="text" name="state"><br><br>
+						<label>Country</label><br>
+						<input class="full" type="text" name="country"><br><br>
+						<label>Pincode</label><br>
+						<input type="text" class="full" name="pin" placeholder="641032" maxlength="6">
+					</fieldset>
+				</form>
+			</div>
 	</form>
 </div>
+<br><br>
 </body>
 </html>
